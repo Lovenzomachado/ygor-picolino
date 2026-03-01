@@ -149,8 +149,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: absolute; inset: 0;
   background: linear-gradient(to top, var(--stone-950) 15%, rgba(12,10,9,0.7) 60%, rgba(12,10,9,0.4) 100%);
 }
-.hero-content { position: relative; z-index: 1; padding: 4rem 0; }
-.hero-text { max-width: 650px; }
+.hero-content { position: relative; z-index: 1; padding: 4rem 0; display: flex; justify-content: flex-start; }
+.hero-text { max-width: 650px; text-align: left; }
 .badge {
   display: inline-block;
   background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2);
