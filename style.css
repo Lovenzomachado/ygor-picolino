@@ -63,23 +63,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 0;
   width: 100%;
   z-index: 100;
-  transition: background var(--transition), padding var(--transition), backdrop-filter var(--transition);
-  padding: 1.5rem 0;
+  transition: background var(--transition), backdrop-filter var(--transition);
 }
 #navbar.scrolled {
   background: rgba(0,0,0,.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 1rem 0;
 }
 
 .nav-inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: padding var(--transition);
+}
+#navbar.scrolled .nav-inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .nav-logo {
@@ -181,7 +184,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================= */
 .hero-container {
   position: relative;
-  height: 400vh;
+  height: 200vh; /* Reduzido de 400vh para 200vh */
   background: var(--gray-900);
 }
 .hero-sticky {
@@ -313,7 +316,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================= */
 .section-problem {
   background: var(--black);
-  color: var(--white);
+  color: var(--gray-500);
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -332,7 +335,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1;
   margin-bottom: 2rem;
 }
-.problem-inner h2 span { color: var(--gray-500); }
+.problem-inner h2 span { color: var(--white); }
 .problem-inner p {
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   color: var(--gray-400);
@@ -574,8 +577,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: -.05em;
   line-height: 1.05;
   margin-bottom: 2rem;
+  color: var(--gray-500);
 }
-.cta-inner h2 span { color: var(--gray-500); }
+.cta-inner h2 span { color: var(--white); }
 .cta-inner p {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: var(--gray-400);
